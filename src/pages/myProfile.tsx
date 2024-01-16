@@ -2,7 +2,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react';
-import { FaLinkedin, FaInstagram, FaWhatsapp, IconType} from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaWhatsapp} from 'react-icons/fa';
 
 const MyProfile: React.FC = () => {
 
@@ -10,7 +10,7 @@ const MyProfile: React.FC = () => {
         link: string;
         username?: string;
         label?: string;
-        icon: IconType;
+        icon: any;
         [key: string]: any; // Index signature to allow dynamic keys
       }
 
@@ -119,7 +119,7 @@ const socialLinksStyle: React.CSSProperties = {
     },
     whatsapp: {
       link: 'https://wa.me/9788788632', // Replace with your WhatsApp number
-      label: 'WhatsApp',
+      username: 'WhatsApp',
       icon: FaWhatsapp,
     },
   };
@@ -162,7 +162,7 @@ const socialLinksStyle: React.CSSProperties = {
         </ul>
       </div>
 
-      <div style={socialLinksStyle}>
+      {/* <div style={socialLinksStyle}>
         <h2 style={headingStyle}>Social Links</h2>
         <ul style={socialLinkListStyle}>
           {Object.keys(socialLinks).map((key) => (
@@ -173,6 +173,29 @@ const socialLinksStyle: React.CSSProperties = {
               </a>
             </li>
           ))}
+        </ul>
+      </div> */}
+
+<div style={socialLinksStyle}>
+        <h2 style={headingStyle}>Social Links</h2>
+        <ul style={socialLinkListStyle}>
+            <li style={socialLinkItemStyle}>
+              <a href={'https://www.linkedin.com/in/thirumurugan-sengottaiyan-141b531a6'} target="_blank" rel="noopener noreferrer">
+              LinkedIn
+              </a>
+            </li>
+
+            <li style={socialLinkItemStyle}>
+              <a href={'https://www.instagram.com/thiru_sathis'} target="_blank" rel="noopener noreferrer">
+              Instagram
+              </a>
+            </li>
+
+            <li style={socialLinkItemStyle}>
+              <a href={'https://wa.me/9788788632'} target="_blank" rel="noopener noreferrer">
+              Whatsapp
+              </a>
+            </li>
         </ul>
       </div>
 
