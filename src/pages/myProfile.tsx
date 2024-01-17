@@ -192,7 +192,7 @@ const socialLinksStyle: React.CSSProperties = {
             </li>
 
             <li style={socialLinkItemStyle}>
-              <a href={'https://wa.me/9788788632'} target="_blank" rel="noopener noreferrer">
+              <a href={'https://wa.me/+919788788632'} target="_blank" rel="noopener noreferrer">
               Whatsapp
               </a>
             </li>
